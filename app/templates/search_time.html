@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Search Pitches by Opening Time</h1>
+<p class="lead">Pick the time you want to play to see every pitch that is open then.</p>
+
+<div class="search-panel">
+  <form method="get" action="{{ url_for('search_by_time') }}">
+    <div class="field">
+      <label for="start">Start time</label>
+      <input type="time" id="start" name="start" value="{{ start }}" required>
+    </div>
+    <div class="field">
+      <label for="end">Finish time (optional)</label>
+      <input type="time" id="end" name="end" value="{{ end }}">
+      <p class="hint">Leave blank to check a single time.</p>
+    </div>
+    <div class="field">
+      <input type="submit" value="Search pitches">
+    </div>
+  </form>
+</div>
+
+{% if pitches is not none %}
+  {% if pitches %}
+    <p class="result-count">
+      {{ pitches|length }} pitch{{ 'es' if pitches|length != 1 }} open
+      {% if end %}from {{ start }} to {{ end }}{% else %}at {{ start }}{% endif %}
+    </p>
+    <div class="table-wrap">
+    <table>
+      <tr>
+        <th>Pitch</th><th>Facility</th><th>Size</th><th>Max players</th>
+        <th>Opens</th><th>Closes</th><th>Rating</th>
+      </tr>
+      {% for p in pitches %}
+      <tr>
+        <td>{{ p.pitch_name }}</td>
+        <td>{{ p.facility_name }}<br><span class="muted">{{ p.address }}</span></td>
+        <td><span class="badge">{{ p.pitch_size }}</span></td>
+        <td>{{ p.max_players }}</td>
+        <td>{{ p.opens }}</td>
+        <td>{{ p.closes }}</td>
+        <td>
+          {% if p.avg_rating %}<span class="rating">&#9733; {{ p.avg_rating }}</span>
+          <span class="muted">({{ p.review_count }})</span>
+          {% else %}<span class="muted">No reviews</span>{% endif %}
+        </td>
+      </tr>
+      {% endfor %}
+    </table>
+    </div>
+  {% else %}
+    <p class="flash">No pitches are open
+      {% if end %}from {{ start }} to {{ end }}{% else %}at {{ start }}{% endif %}.
+      Try an earlier or shorter time slot.</p>
+  {% endif %}
+{% endif %}
+{% endblock %}

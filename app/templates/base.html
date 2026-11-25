@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ title }} - Astro Pitch Database</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <nav>
+    <span class="brand">Astro Pitch Database</span>
+    <a href="{{ url_for('index') }}">Home</a>
+    <a href="{{ url_for('about') }}">About Us</a>
+  </nav>
+  <main>
+    {% with messages = get_flashed_messages() %}
+      {% for message in messages %}<div class="flash">{{ message }}</div>{% endfor %}
+    {% endwith %}
+    {% block content %}{% endblock %}
+  </main>
+  <footer>Astro Pitch Database - INFO8021 project - Andrew White (R00253860)</footer>
+</body>
+</html>

@@ -1,0 +1,41 @@
+review_id,rating,comment,review_date,user_id,pitch_id
+R001,4,"Nice surface, nets need replacing soon.",2026-09-27,U013,P006
+R002,3,Average - the lights flicker sometimes.,2026-08-12,U018,P022
+R003,4,"Good pitch, parking can be tight at peak times.",2026-05-02,U015,P004
+R004,4,"Solid venue, a bit pricey on weekends.",2026-03-21,U011,P024
+R005,4,"Good pitch, parking can be tight at peak times.",2026-06-12,U017,P012
+R006,2,Booking got mixed up and we lost 20 minutes.,2026-03-08,U014,P014
+R007,5,Easy to book and the changing rooms are clean.,2026-03-15,U013,P015
+R008,4,"Good pitch, parking can be tight at peak times.",2026-08-18,U003,P004
+R009,4,"Nice surface, nets need replacing soon.",2026-02-06,U006,P017
+R010,4,"Good lighting, would book again.",2026-08-23,U006,P022
+R011,3,Average - the lights flicker sometimes.,2026-07-11,U017,P018
+R012,3,Average - the lights flicker sometimes.,2026-05-16,U009,P012
+R013,3,Average - the lights flicker sometimes.,2026-03-02,U005,P018
+R014,3,Average - the lights flicker sometimes.,2026-04-27,U001,P024
+R015,4,"Nice surface, nets need replacing soon.",2026-06-09,U003,P004
+R016,4,"Nice surface, nets need replacing soon.",2026-05-01,U017,P008
+R017,5,Easy to book and the changing rooms are clean.,2026-07-04,U008,P006
+R018,4,"Nice surface, nets need replacing soon.",2026-01-27,U006,P008
+R019,4,"Good lighting, would book again.",2026-03-27,U016,P001
+R020,3,Grand for a kickabout but the surface is worn.,2026-08-15,U006,P008
+R021,3,Grand for a kickabout but the surface is worn.,2026-10-04,U013,P012
+R022,4,"Good pitch, parking can be tight at peak times.",2026-05-08,U004,P017
+R023,4,"Good pitch, parking can be tight at peak times.",2026-04-26,U007,P011
+R024,4,"Good lighting, would book again.",2026-09-08,U012,P001
+R025,5,Easy to book and the changing rooms are clean.,2026-07-08,U015,P014
+R026,3,Grand for a kickabout but the surface is worn.,2026-02-16,U019,P014
+R027,4,"Good lighting, would book again.",2026-05-05,U013,P022
+R028,4,"Good pitch, parking can be tight at peak times.",2026-04-22,U011,P003
+R029,4,"Nice surface, nets need replacing soon.",2026-07-16,U007,P022
+R030,4,"Good lighting, would book again.",2026-08-16,U007,P009
+R031,4,"Solid venue, a bit pricey on weekends.",2026-05-01,U003,P019
+R032,1,Pitch was waterlogged and unusable.,2026-05-26,U001,P016
+R033,2,Surface is very worn in the goalmouth.,2026-04-19,U006,P014
+R034,3,"OK pitch, changing rooms were cold.",2026-02-16,U004,P012
+R035,5,"Best pitch in Cork, always well kept.",2026-04-17,U004,P016
+R036,1,Pitch was waterlogged and unusable.,2026-08-30,U017,P014
+R037,5,Easy to book and the changing rooms are clean.,2026-09-06,U004,P016
+R038,2,Surface is very worn in the goalmouth.,2026-10-24,U019,P013
+R039,4,"Solid venue, a bit pricey on weekends.",2026-03-05,U013,P021
+R040,3,"OK pitch, changing rooms were cold.",2026-11-02,U008,P009

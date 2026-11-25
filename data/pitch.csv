@@ -1,0 +1,25 @@
+pitch_id,pitch_name,pitch_size,max_players,opening_time,closing_time,facility_id
+P001,Lee Valley Pitch 1,5-a-side,10,07:00,22:00,F001
+P002,Lee Valley Pitch 2,5-a-side,10,07:00,22:00,F001
+P003,Lee Valley Main Pitch,11-a-side,22,09:00,21:00,F001
+P004,Ballincollig Cage A,5-a-side,10,16:00,22:30,F002
+P005,Ballincollig Cage B,7-a-side,14,16:00,22:30,F002
+P006,Mahon Pitch 1,5-a-side,10,06:30,23:00,F003
+P007,Mahon Pitch 2,5-a-side,10,06:30,23:00,F003
+P008,Mahon Pitch 3,7-a-side,14,08:00,22:00,F003
+P009,Mahon Full Pitch,11-a-side,22,10:00,20:00,F003
+P010,Blackpool Court 1,5-a-side,10,09:00,22:00,F004
+P011,Blackpool Court 2,7-a-side,14,09:00,22:00,F004
+P012,Blackpool 9s Pitch,9-a-side,18,17:00,22:00,F004
+P013,Douglas Pitch A,5-a-side,10,08:00,21:30,F005
+P014,Douglas Pitch B,7-a-side,14,08:00,21:30,F005
+P015,Douglas Park 9s,9-a-side,18,10:00,21:00,F005
+P016,Bishopstown Pitch 1,5-a-side,10,12:00,23:00,F006
+P017,Bishopstown Pitch 2,5-a-side,10,12:00,23:00,F006
+P018,Bishopstown Pitch 3,7-a-side,14,12:00,22:00,F006
+P019,Glanmire Pitch 1,5-a-side,10,09:30,21:00,F007
+P020,Glanmire Big Pitch,11-a-side,22,09:00,18:00,F007
+P021,Carrigaline Arena 1,5-a-side,10,07:30,22:30,F008
+P022,Carrigaline Arena 2,7-a-side,14,07:30,22:30,F008
+P023,Carrigaline Arena 3,9-a-side,18,18:00,22:30,F008
+P024,Carrigaline Stadium,11-a-side,22,10:00,21:00,F008

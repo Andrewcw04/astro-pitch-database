@@ -1,0 +1,83 @@
+# INFO8021 Technical Specification (updated for Submission 3)
+# Student: Andrew White (R00253860)
+application:
+  name: Astro Pitch Database
+  description: Find astro pitches by opening time and group size, and review them
+  student:
+    name: Andrew White
+    id: R00253860
+
+database:
+  name: PostgreSQL
+  version: "18.6"
+  server: localhost
+  database: astropitch        # created by initialise_db.py (was "postgres")
+  port: 5432
+  username: postgres
+  password: postgres
+  prompt: "postgres=#"
+  tables:
+    - facility
+    - pitch
+    - users        # USER is a reserved word in PostgreSQL
+    - review
+
+backend:
+  language:
+    name: Python
+    version: "3.12"
+  framework:
+    name: Flask
+    version: "3.1.3"
+  packages:
+    - name: psycopg[binary]     # PostgreSQL driver
+      version: "3.3.9"          # updated from 3.3.4
+    - name: python-dotenv       # loads DB settings from .env
+      version: "1.2.3"
+    - name: Flask-WTF           # forms and CSRF protection - deferred to register/login
+      version: "1.2.2"          # TODO: confirm latest on PyPI
+    - name: WTForms
+      version: "3.2.1"          # TODO: confirm latest on PyPI
+    - name: Flask-Login         # user sessions - deferred to login
+      version: "0.6.3"          # TODO: confirm latest on PyPI
+
+frontend:
+  languages:
+    - name: HTML
+      version: "5"
+    - name: CSS
+      version: "3"
+  template_engine:
+    name: Jinja2                # installed with Flask
+  stylesheet: app/static/style.css
+
+tools:
+  version_control:
+    name: Git
+    version: "2.50"             # TODO: confirm installed version with git --version
+  containerisation:
+    name: Docker Engine
+    version: "29.7.2"
+  pipeline:
+    format: YAML
+    file: pipeline.yml          # to be added in a later submission
+  editor:
+    name: Notepad++
+    version: "8.8"              # TODO: confirm installed version (? > About)
+  diagrams:
+    - Visual Paradigm
+    - MS Visio
+
+features:
+  - id: 1
+    name: Search pitches by opening time
+  - id: 2
+    name: Filter pitches by size or group size
+  - id: 3
+    name: Register
+  - id: 4
+    name: Login
+  - id: 5
+    name: Add a review for a pitch
+  - id: 6
+    name: Display pitch summary table

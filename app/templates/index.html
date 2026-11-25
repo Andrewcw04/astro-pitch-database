@@ -2,5 +2,11 @@
 {% block content %}
 <h1>Welcome to Astro Pitch Database</h1>
 <p>Find an astro pitch that is open when you want to play and the right size for your group.</p>
-<p>Pitch search is coming soon. Register or log in to leave reviews and see the pitch summary.</p>
+<div class="features">
+  <div class="pitch">
+    <h2>Find a pitch for your group</h2>
+    <p>Tell us how many players you have and we will show the pitches that fit.</p>
+    <a class="button-link" href="{{ url_for('filter_by_size') }}">Filter by group size</a>
+  </div>
+</div>
 {% endblock %}

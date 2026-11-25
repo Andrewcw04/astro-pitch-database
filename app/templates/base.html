@@ -9,8 +9,9 @@
 <body>
   <nav>
     <span class="brand">Astro Pitch Database</span>
-    <a href="{{ url_for('index') }}">Home</a>
-    <a href="{{ url_for('about') }}">About Us</a>
+    <a href="{{ url_for('index') }}" class="{{ 'active' if request.endpoint == 'index' }}">Home</a>
+    <a href="{{ url_for('filter_by_size') }}" class="{{ 'active' if request.endpoint == 'filter_by_size' }}">Group Size</a>
+    <a href="{{ url_for('about') }}" class="{{ 'active' if request.endpoint == 'about' }}">About Us</a>
   </nav>
   <main>
     {% with messages = get_flashed_messages() %}

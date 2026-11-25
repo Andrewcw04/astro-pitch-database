@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Find a Pitch for Your Group</h1>
+<p class="lead">Enter how many players you have to see pitches big enough, smallest first.</p>
+
+<div class="search-panel">
+  <form method="get" action="{{ url_for('filter_by_size') }}">
+    <div class="field">
+      <label for="players">Number of players</label>
+      <input type="number" id="players" name="players" min="1" max="{{ max_group }}"
+             value="{{ players }}" placeholder="e.g. 12">
+    </div>
+    <div class="field">
+      <label for="size">Pitch size (optional)</label>
+      <select id="size" name="size">
+        <option value="">Any size</option>
+        {% for s in sizes %}
+        <option value="{{ s }}" {{ 'selected' if s == size }}>{{ s }}</option>
+        {% endfor %}
+      </select>
+    </div>
+    <div class="field">
+      <input type="submit" value="Find pitches">
+    </div>
+  </form>
+</div>
+
+{% if pitches is not none %}
+  {% if pitches %}
+    <p class="result-count">
+      {{ pitches|length }} pitch{{ 'es' if pitches|length != 1 }} found
+      {% if players %} for {{ players }} players{% endif %}
+      {% if size %} ({{ size }} only){% endif %}
+    </p>
+    {% if best_size %}
+      <p class="flash">Smallest pitch size that fits your group: <strong>{{ best_size }}</strong></p>
+    {% endif %}
+    <div class="table-wrap">
+    <table>
+      <tr>
+        <th>Pitch</th><th>Facility</th><th>Size</th><th>Max players</th>
+        {% if players %}<th>Spare places</th>{% endif %}<th>Open</th>
+      </tr>
+      {% for p in pitches %}
+      <tr>
+        <td>{{ p.pitch_name }}</td>
+        <td>{{ p.facility_name }}<br><span class="muted">{{ p.address }}</span></td>
+        <td><span class="badge">{{ p.pitch_size }}</span></td>
+        <td>{{ p.max_players }}</td>
+        {% if players %}<td>{{ p.spare_places }}</td>{% endif %}
+        <td>{{ p.opens }} - {{ p.closes }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+    </div>
+  {% else %}
+    <p class="flash">No pitches match that search. Try a smaller group or "Any size".</p>
+  {% endif %}
+{% endif %}
+{% endblock %}
